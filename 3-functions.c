@@ -70,7 +70,7 @@ int print_rot13string(va_list types, char buffer[], int flags, int width,
 	UNUSED(width);
 	UNUSED(size);
 	UNUSED(flags);
-	UNUSED(precison);
+	UNUSED(precision);
 
 	if (str == NULL)
 		str = "(AHYY)";

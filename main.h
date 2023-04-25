@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-#define UNUSED(x) (void) (x)
+#define UNUSED(x) (void)(x)
 #define BUFF_SIZE 1024
 
 /* sizes */
