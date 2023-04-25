@@ -30,11 +30,11 @@ int _printf(const char *format, ...)
 		{
 			print_buffer(buffer, &buff_ind);
 			flags = get_flags(format, &i);
-			width = get_width(format, &i, list);
-			precision = get_precision(format, &i, list);
+			width = get_width(format, &i, arguments);
+			precision = get_precision(format, &i,arguments);
 			size = get_size(format, &i);
 			++i;
-			printed = handle_print(format, &i, list, buffer,
+			printed = handle_print(format, &i, arguments, buffer,
 					       flags, width, precision, size);
 			if (printed == -1)
 				return (-1);
@@ -55,7 +55,7 @@ int _printf(const char *format, ...)
 void print_buffer(char buffer[], int *buffer_ind)
 {
 	if (*buffer_ind > 0)
-		write(1, &buffer[0], *buff_ind);
+		write(1, &buffer[0], *buffer_ind);
 
 	*buffer_ind = 0;
 }
