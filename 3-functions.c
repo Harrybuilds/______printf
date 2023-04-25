@@ -1,6 +1,6 @@
 #include "main.h"
 
-/************************ PRINT NON PRINTABLE *************************/
+/* function to print non printable */
 
 /**
  * print_non_printable - Prints ascii codes in hexa of non printable characters
@@ -97,7 +97,7 @@ int print_rot13string(va_list types, char buffer[], int flags, int width,
 
 }
 
-/******************** PRINT POINTER ********************/
+/* function to print pointer */
 
 /**
  * print_pointer - Prints the value of a pointer variable
@@ -152,19 +152,19 @@ int print_pointer(va_list types, char buffer[], int flags, int width,
 	padd, extra_c, padd_start));
 }
 
-/************************* PRINT REVERSE *************************/
+/* function to print reverse */
 
 /**
  * print_reverse - Prints reverse string.
  * @buffer: Buffer array to handle print
  * @precision: Precision specification
- * @size: Size specifier
- * @types: List of arguments
+ * @size: size specifier
+ * @types: list of arguments
  * @width: get width
- * @flags: Calculates active flags
- * Return: Numbers of characters printed
+ * @flags: calculates active flags
+ * Return: returns numbers of characters printed
  */
-int pint_reverse(va_list types, char buffer[], int flags, int width,
+int print_reverse(va_list types, char buffer[], int flags, int width,
 	int precision, int size)
 {
 	char *str;

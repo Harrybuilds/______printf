@@ -11,24 +11,25 @@
 
 int get_precision(const char *format, int *i, va_list list)
 {
-	int curr_i = *i + 1;
+	int c_i = *i + 1;
 	int precision = -1;
 
-	if (format[curr_i] != '.')
+	if (format[c_i] != '.')
 		return (precision);
 
 	precision = 0;
 
-	for (curr_i += 1; format[curr_i] != '\0'; curr_i++)
+	for (c_i +=1; format[c_i] != '\0'; c_i++)
+
 	{
-		if (is_digit(format[curr_i]))
+		if (is_digit(format[c_i]))
 		{
 			precision *= 10;
-			precision += format[curr_i] - '0';
+			precision += format[c_i] - '0';
 		}
-		else if (format[curr_i] == '*')
+		else if (format[c_i] == '*')
 		{
-			curr_i++;
+			c_i++;
 			precision = va_arg(list, int);
 			break;
 		}
@@ -36,7 +37,7 @@ int get_precision(const char *format, int *i, va_list list)
 			break;
 	}
 
-	*i = curr_i - 1;
+	*i = c_i - 1;
 
 	return (precision);
 }
