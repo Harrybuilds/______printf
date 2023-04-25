@@ -14,7 +14,7 @@
  */
 
 int print_char(va_list types, char buffer[], int flags,
-	       int width,int precision, int size)
+	       int width, int precision, int size)
 {
 	char c = va_arg(types, int);
 
@@ -115,7 +115,7 @@ int print_percent(va_list types, char buffer[], int flags,
  * Return: returns number of character printed
  */
 int print_binary(va_list types, char buffer[], int flags,
-		 int width,int precision, int size)
+		 int width, int precision, int size)
 {
 	unsigned int n, m, i, sum;
 	unsigned int a[32];
