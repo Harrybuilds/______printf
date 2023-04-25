@@ -63,7 +63,10 @@ int print_octal(va_list types, char buffer[], int flags,
 		if (flags & F_HASH && init_num != 0)
 			buffer[j--] = '0';
 	}
+
 	return (write_unsgned(0, j, buffer, flags, width, precision, size));
+
+
 }
 
 /* function to print unsigned number in hexadecimal form */
@@ -145,4 +148,5 @@ int print_hexa(va_list types, char map_to[], char buffer[],
 	}
 
 	return (write_unsgned(0, k, buffer, flags, width, precision, size));
+
 }
